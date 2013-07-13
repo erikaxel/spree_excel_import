@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    spree_excel_import (0.0.1)
+    spree_excel_import (0.0.2)
       roo (>= 1.9.3)
       spree_core (>= 1.3.0)
 

@@ -57,7 +57,7 @@ module SpreeExcelImport
       master = Spree::Variant.where("sku = ?", sku).first
       if master
         product = master.product
-        product.update_column(:count_on_hand, count_on_hand)
+        #product.update_column(:count_on_hand, count_on_hand)
       else
         product = Spree::Product.new()
 
@@ -80,10 +80,10 @@ module SpreeExcelImport
       product.name = name
       product.tax_category = tax_category
       product.description = description
-      product.available_on = available_on #DateTime.now - 1.day un
+      product.available_on = available_on
 
       product.master.is_master = true
-      product.master.count_on_hand = count_on_hand
+      #product.master.count_on_hand = count_on_hand
       product.master.cost_price= cost_price
       product.master.default_price.amount = price
 
